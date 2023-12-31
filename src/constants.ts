@@ -3,7 +3,7 @@ import { MdOutlineTravelExplore } from "react-icons/md";
 import { HiUserGroup } from "react-icons/hi2";
 
 
-export const sidebarList: { icon: React.ReactNode; text: string; href: string }[] = [
+export const sidebarList: { icon: React.ElementType; text: string; href: string }[] = [
   {
     icon: IoHomeSharp,
     text: "Home",

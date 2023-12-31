@@ -4,12 +4,11 @@ import React from "react";
 import SidebarItem from "./sidebarItem";
 import { sidebarList } from "@/constants";
 import { usePathname } from "next/navigation";
+import { text } from "stream/consumers";
 
 const Sidebar = () => {
+  const pathname = usePathname();
 
-
-  const pathname = usePathname()
-  
   return (
     <>
       <button
@@ -49,16 +48,19 @@ const Sidebar = () => {
           />
 
           <ul className="space-y-2 py-5 font-medium">
-            {sidebarList?.map((item, index) => (
-              <li key={index}>
-                <SidebarItem
-                  icon={<item.icon />}
-                  text={item.text}
-                  href={item.href}
-                  isActive={item.href === pathname}
-                />
-              </li>
-            ))}
+            {sidebarList?.map((item, index) => {
+              const { icon, text, href } = item;
+              return (
+                <li key={index}>
+                  <SidebarItem
+                    Icon={icon}
+                    text={text}
+                    href={href}
+                    isActive={href === pathname}
+                  />
+                </li>
+              );
+            })}
           </ul>
         </div>
       </aside>
