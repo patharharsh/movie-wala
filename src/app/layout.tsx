@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-darkBackground text-darkText min-h-screen">
-        <div className="flex">
-          <div className="w-[300px]">
+      <body className="bg-darkBackground text-darkText min-h-screen justify-between">
+        <div className="flex sm:flex-row flex-col">
+          <div className="sm:w-[270px] w-full">
             <Sidebar />
           </div>
-          <div className="w-full">
+          <div className="sm:w-[calc(100%-300px)] w-full">
             <Navbar />
             {children}
           </div>
