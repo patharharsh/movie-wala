@@ -9,7 +9,7 @@ const makeInternalApiRequest = async (method: string, url:string, payload?: any)
     });
     return data;
   } catch (error) {
-    console.log("Axios error : ", error);
+    console.log("INternal Axios error : ", error);
   }
 };
 
