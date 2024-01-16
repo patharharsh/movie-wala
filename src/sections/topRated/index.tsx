@@ -21,8 +21,7 @@ const TopRated = () => {
     <div>
       <SectionTitle>Top Rated</SectionTitle>
       <div
-        className="overflow-x-auto overflow-y-hidden my-5 py-5"
-        style={{ display: "block ruby" }}
+        className="overflow-x-auto overflow-y-hidden my-5 py-5 flex"
       >
         {topRated?.map((i: any, index) => (
           <div key={index} className="md:w-[320px] w-[150px] relative">
