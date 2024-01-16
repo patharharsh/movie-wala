@@ -1,12 +1,13 @@
-import HeroSection from '@/components/herosection/HeroSection'
-import SectionTitle from '@/components/sectionTitle/sectionTitle'
+
+import HeroSection from '@/sections/herosection'
+import TopRated from '@/sections/topRated'
 import React from 'react'
 
 const Home = () => {
   return (
     <div>
       <HeroSection />
-      <SectionTitle>New Arrival</SectionTitle>
+      <TopRated />
     </div>
   )
 }

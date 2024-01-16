@@ -5,6 +5,7 @@ const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -13,6 +14,9 @@ const config: Config = {
         darkBackground: '#1a202c',
         darkText: '#ffffff',
       },
+      boxShadow: {
+        mw : '0px 25px 32px 0px rgba(40,186,145,0.2)'
+      }
     },
   },
   plugins: [],

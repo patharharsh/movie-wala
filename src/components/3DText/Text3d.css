@@ -1,0 +1,13 @@
+.css-3d-text {
+    color: #ffffff;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(225,225,225),
+                 1px 1px 0 rgb(195,195,195),
+                 2px 2px 0 rgb(164,164,164),
+                 3px 3px 0 rgb(134,134,134),
+                 4px 4px 0 rgb(104,104,104),
+                 5px 5px  0 rgb(74,74,74),
+                 6px 6px 5px rgba(78,204,162,0.6),
+                 6px 6px 1px rgba(78,204,162,0.5),
+                 0px 0px 5px rgba(78,204,162,.2);
+ }
