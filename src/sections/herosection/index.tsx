@@ -21,7 +21,7 @@ const HeroSection = () => {
       <Carousel
         activeIndicatorIconButtonProps={{
           style: {
-              color: '#4ECCA3' // 2
+              color: '#4ECCA3' 
           }
       }}
       autoPlay={false}
