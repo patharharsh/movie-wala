@@ -1,4 +1,5 @@
 "use client";
+import SectionTitle from "@/components/sectionTitle/sectionTitle";
 import makeTMDBApiRequest from "@/utils/makeTMDMApiRequest";
 import { log } from "console";
 import Image from "next/image";
@@ -84,31 +85,38 @@ const DetailPage = ({ params }: { params: { id: string } }) => {
           </div>
         </div>
 
-        <div
-          className="overflow-x-auto overflow-y-hidden my-5 py-5 gap-3 overscroll-none flex no-scrollbar"
-          style={{display: "-webkit-box"}}
-          ref={scrollRef}
-          onWheel={handleWheel}
-        >
-          {reviews?.map((review: any) => (
-            <div key={review?.id} className=" md:w-[320px] w-[250px] pt-[50px]">
-              <div className="w-[100px] h-[100px] overflow-hidden rounded-full mx-auto mb-[-50px]">
-                <Image
-                  width={100}
-                  height={500}
-                  alt={review?.author}
-                  src={
-                    review?.author_details?.avatar_path
-                      ? `https://image.tmdb.org/t/p/original${review?.author_details?.avatar_path}`
-                      : `/no-avtar.png`
-                  }
-                />
+        <div className="my-12 px-5">
+          <SectionTitle> Top Reviews </SectionTitle>
+          <div
+            className="overflow-x-auto overflow-y-hidden gap-3 overscroll-none flex no-scrollbar"
+            style={{ display: "-webkit-box" }}
+            ref={scrollRef}
+            onWheel={handleWheel}
+          >
+            {reviews?.map((review: any) => (
+              <div key={review?.id} className=" md:w-[320px] w-[250px] ">
+                <div className="w-[100px] h-[100px] overflow-hidden rounded-full mx-auto mb-[-50px]">
+                  <Image
+                    width={100}
+                    height={500}
+                    alt={review?.author}
+                    src={
+                      review?.author_details?.avatar_path
+                        ? `https://image.tmdb.org/t/p/original${review?.author_details?.avatar_path}`
+                        : `/no-avtar.png`
+                    }
+                  />
+                </div>
+                <div className="bg-[#0a12218a] pt-[50px] text-center rounded-md pb-4">
+                  <h1>{review?.author}</h1>
+                  <div
+                    className="line-clamp-3 px-4 min-h-[72px]"
+                    dangerouslySetInnerHTML={{ __html: review?.content }}
+                  ></div>
+                </div>
               </div>
-              <div className="bg-slate-300 pt-[50px] text-center rounded-md">
-                <h1>{review?.author}</h1>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
