@@ -11,7 +11,7 @@ const DetailPage = ({ params }: { params: { id: string } }) => {
   const [reviews, setReviews] = useState<any>();
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const handleWheel = (e: WheelEvent<HTMLDivElement>) => {
+  const handleWheel = (e: any) => {
     e.preventDefault();
     if (scrollRef.current) {
       const scrollAmount = e.deltaY;
