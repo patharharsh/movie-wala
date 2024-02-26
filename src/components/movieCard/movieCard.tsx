@@ -19,7 +19,7 @@ const MovieCard = ({
     <div>
       <div className={`rounded-2xl overflow-hidden ${className}`}>
         <Link href={`/movie/${id}`}>
-          <Image src={poster_path} alt={title} width={1000} height={100} />
+          <Image src={poster_path} placeholder="blur" blurDataURL="./loading.jpg" alt={title} width={1000} height={100} />
         </Link>
       </div>
     </div>
