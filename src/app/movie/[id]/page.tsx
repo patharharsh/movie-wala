@@ -72,7 +72,7 @@ const DetailPage = ({ params }: { params: { id: string } }) => {
               <p className="md:text-lg text-md mb-5 ">{data?.overview}</p>
               <div className="flex gap-2 my-4">
                 {data?.genres?.map((genre: any) => (
-                  <span className="text-xs border border-[#4ECCA3] rounded-full bg-[#4ecca260] py-1 px-2">
+                  <span key={genre?.id} className="text-xs border border-[#4ECCA3] rounded-full bg-[#4ecca260] py-1 px-2">
                     {genre?.name}
                   </span>
                 ))}
